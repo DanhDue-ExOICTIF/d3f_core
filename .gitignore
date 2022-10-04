@@ -46,3 +46,11 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+# Flutter Version Manager.
+.fvm/
+
+# Generated files.
+*.g.dart
+*.freezed.dart
+/lib/generated
