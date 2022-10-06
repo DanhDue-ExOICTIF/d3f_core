@@ -266,6 +266,15 @@ packages:
       url: "https://github.com/DanhDue/d3f_login.git"
     source: git
     version: "1.0.0+1"
+  d3f_networking:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: develop
+      resolved-ref: cce034cc7a8a2d6b7161b2609f2fe8748f1ced61
+      url: "https://github.com/DanhDue/d3f_networking.git"
+    source: git
+    version: "1.0.0+1"
   d3f_shared:
     dependency: transitive
     description:
