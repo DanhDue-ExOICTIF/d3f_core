@@ -1,5 +1,5 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:d3f_networking/interfaces/base_client_generator.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user_client.freezed.dart';
 
