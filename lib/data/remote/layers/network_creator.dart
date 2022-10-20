@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'dart:async';
 
 import 'package:d3f_core/app/app_configurations.dart';
@@ -26,8 +28,8 @@ class NetworkCreator {
 
   Future<Response> request(
       {required BaseClientGenerator route,
-        NetworkOptions? options,
-        bool? tokenRefreshing = false}) async {
+      NetworkOptions? options,
+      bool? tokenRefreshing = false}) async {
     /// Load configurations
     _appConfigs = await _appConfigRepo.retrieveAppConfigurations();
 
@@ -61,7 +63,7 @@ class NetworkCreator {
       });
       dioAdapter?.onGet('price?symbol=SXPBTC', (server) {
         server.reply(
-          // (tokenRefreshing == true) ? HttpStatus.ok : HttpStatus.unauthorized,
+            // (tokenRefreshing == true) ? HttpStatus.ok : HttpStatus.unauthorized,
             HttpStatus.ok,
             {
               'status': 'DanhDue ExOICTIF',
@@ -72,7 +74,10 @@ class NetworkCreator {
                 'next': '/delegates/gym/blocks?page=2&limit=100&transform=true',
                 'previous': null
               },
-              'data': [{'symbol': 'SXPBTC', 'price': '1.568'}, {'symbol': 'SXPBTC', 'price': '1.568'}]
+              'data': [
+                {'symbol': 'SXPBTC', 'price': '1.568'},
+                {'symbol': 'SXPBTC', 'price': '1.568'}
+              ]
             });
       });
       dioAdapter?.onPost('refresh', (server) {
@@ -102,7 +107,7 @@ class NetworkCreator {
 
   dynamic requestInterceptor(
       {required RequestOptions options,
-        required RequestInterceptorHandler handler}) async {
+      required RequestInterceptorHandler handler}) async {
     if (_appConfigs?.accessToken != null) {
       options.headers
           .addAll({"Authorization": "Bearer ${_appConfigs?.accessToken}"});
@@ -112,14 +117,14 @@ class NetworkCreator {
 
   dynamic refreshTokenInterceptor(
       {required DioError error,
-        required ErrorInterceptorHandler handler,
-        required BaseClientGenerator route,
-        NetworkOptions? options}) async {
+      required ErrorInterceptorHandler handler,
+      required BaseClientGenerator route,
+      NetworkOptions? options}) async {
     if (error.response?.statusCode == HttpStatus.forbidden ||
         error.response?.statusCode == HttpStatus.unauthorized) {
       await refreshToken();
       final _response =
-      await request(route: route, options: options, tokenRefreshing: true);
+          await request(route: route, options: options, tokenRefreshing: true);
       handler.resolve(_response);
       return;
     }
@@ -142,8 +147,8 @@ class NetworkCreator {
       // Get.toNamed(AppLinks.login);
     } else {
       _appConfigs = _appConfigs?.copyWith(
-          refreshToken: _tokenResponse?.refreshToken,
-          accessToken: _tokenResponse?.accessToken) ??
+              refreshToken: _tokenResponse?.refreshToken,
+              accessToken: _tokenResponse?.accessToken) ??
           AppConfigurations(
               refreshToken: _tokenResponse?.refreshToken,
               accessToken: _tokenResponse?.accessToken);

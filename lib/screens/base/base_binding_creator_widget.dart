@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:d3f_core/binding_creator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
