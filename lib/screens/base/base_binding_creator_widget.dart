@@ -13,7 +13,8 @@ abstract class BaseBindingCreatorWidget<Binding extends Bindings,
     T extends BaseController> extends BaseView<T> {
   final BindingCreator<Binding>? bindingCreator;
 
-  BaseBindingCreatorWidget({required this.bindingCreator});
+  BaseBindingCreatorWidget({Key? key, required this.bindingCreator})
+      : super(key: key);
 
   Widget? onCreateViews(BuildContext context);
 
