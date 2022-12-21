@@ -31,8 +31,7 @@ mixin _$AppConfigurations {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $AppConfigurationsCopyWith<AppConfigurations> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppConfigurationsCopyWith<AppConfigurations> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -48,8 +47,7 @@ abstract class $AppConfigurationsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AppConfigurationsCopyWithImpl<$Res>
-    implements $AppConfigurationsCopyWith<$Res> {
+class _$AppConfigurationsCopyWithImpl<$Res> implements $AppConfigurationsCopyWith<$Res> {
   _$AppConfigurationsCopyWithImpl(this._value, this._then);
 
   final AppConfigurations _value;
@@ -85,10 +83,9 @@ class _$AppConfigurationsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_AppConfigurationsCopyWith<$Res>
-    implements $AppConfigurationsCopyWith<$Res> {
-  factory _$$_AppConfigurationsCopyWith(_$_AppConfigurations value,
-          $Res Function(_$_AppConfigurations) then) =
+abstract class _$$_AppConfigurationsCopyWith<$Res> implements $AppConfigurationsCopyWith<$Res> {
+  factory _$$_AppConfigurationsCopyWith(
+          _$_AppConfigurations value, $Res Function(_$_AppConfigurations) then) =
       __$$_AppConfigurationsCopyWithImpl<$Res>;
   @override
   $Res call(
@@ -99,8 +96,7 @@ abstract class _$$_AppConfigurationsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AppConfigurationsCopyWithImpl<$Res>
-    extends _$AppConfigurationsCopyWithImpl<$Res>
+class __$$_AppConfigurationsCopyWithImpl<$Res> extends _$AppConfigurationsCopyWithImpl<$Res>
     implements _$$_AppConfigurationsCopyWith<$Res> {
   __$$_AppConfigurationsCopyWithImpl(
       _$_AppConfigurations _value, $Res Function(_$_AppConfigurations) _then)
@@ -172,12 +168,9 @@ class _$_AppConfigurations implements _AppConfigurations {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AppConfigurations &&
-            const DeepCollectionEquality()
-                .equals(other.latestSyncedTime, latestSyncedTime) &&
-            const DeepCollectionEquality()
-                .equals(other.accessToken, accessToken) &&
-            const DeepCollectionEquality()
-                .equals(other.refreshToken, refreshToken) &&
+            const DeepCollectionEquality().equals(other.latestSyncedTime, latestSyncedTime) &&
+            const DeepCollectionEquality().equals(other.accessToken, accessToken) &&
+            const DeepCollectionEquality().equals(other.refreshToken, refreshToken) &&
             const DeepCollectionEquality().equals(other.baseUrl, baseUrl));
   }
 
@@ -193,8 +186,7 @@ class _$_AppConfigurations implements _AppConfigurations {
   @JsonKey(ignore: true)
   @override
   _$$_AppConfigurationsCopyWith<_$_AppConfigurations> get copyWith =>
-      __$$_AppConfigurationsCopyWithImpl<_$_AppConfigurations>(
-          this, _$identity);
+      __$$_AppConfigurationsCopyWithImpl<_$_AppConfigurations>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -211,8 +203,7 @@ abstract class _AppConfigurations implements AppConfigurations {
       @HiveField(5) final String? refreshToken,
       @HiveField(6) final String? baseUrl}) = _$_AppConfigurations;
 
-  factory _AppConfigurations.fromJson(Map<String, dynamic> json) =
-      _$_AppConfigurations.fromJson;
+  factory _AppConfigurations.fromJson(Map<String, dynamic> json) = _$_AppConfigurations.fromJson;
 
   @override
   @HiveField(0)

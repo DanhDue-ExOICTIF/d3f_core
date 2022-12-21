@@ -9,12 +9,11 @@ import 'package:get/get_instance/src/bindings_interface.dart';
 import 'base_controller.dart';
 import 'base_view.dart';
 
-abstract class BaseBindingCreatorWidget<Binding extends Bindings,
-    T extends BaseController> extends BaseView<T> {
+abstract class BaseBindingCreatorWidget<Binding extends Bindings, T extends BaseController>
+    extends BaseView<T> {
   final BindingCreator<Binding>? bindingCreator;
 
-  BaseBindingCreatorWidget({Key? key, required this.bindingCreator})
-      : super(key: key);
+  BaseBindingCreatorWidget({Key? key, required this.bindingCreator}) : super(key: key);
 
   Widget? onCreateViews(BuildContext context);
 

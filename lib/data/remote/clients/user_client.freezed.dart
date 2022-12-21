@@ -51,14 +51,12 @@ mixin _$UserClient {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $UserClientCopyWith<UserClient> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UserClientCopyWith<UserClient> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $UserClientCopyWith<$Res> {
-  factory $UserClientCopyWith(
-          UserClient value, $Res Function(UserClient) then) =
+  factory $UserClientCopyWith(UserClient value, $Res Function(UserClient) then) =
       _$UserClientCopyWithImpl<$Res>;
   $Res call({String? refreshToken});
 }
@@ -86,8 +84,7 @@ class _$UserClientCopyWithImpl<$Res> implements $UserClientCopyWith<$Res> {
 
 /// @nodoc
 abstract class _$$_RefreshCopyWith<$Res> implements $UserClientCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
+  factory _$$_RefreshCopyWith(_$_Refresh value, $Res Function(_$_Refresh) then) =
       __$$_RefreshCopyWithImpl<$Res>;
   @override
   $Res call({String? refreshToken});
@@ -133,13 +130,11 @@ class _$_Refresh extends _Refresh {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Refresh &&
-            const DeepCollectionEquality()
-                .equals(other.refreshToken, refreshToken));
+            const DeepCollectionEquality().equals(other.refreshToken, refreshToken));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(refreshToken));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(refreshToken));
 
   @JsonKey(ignore: true)
   @override
@@ -211,6 +206,5 @@ abstract class _Refresh extends UserClient {
   String? get refreshToken;
   @override
   @JsonKey(ignore: true)
-  _$$_RefreshCopyWith<_$_Refresh> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_RefreshCopyWith<_$_Refresh> get copyWith => throw _privateConstructorUsedError;
 }
