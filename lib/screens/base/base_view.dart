@@ -14,8 +14,7 @@ abstract class BaseView<C extends BaseController> extends GetView<C> {
   void showLoadingDialog() {
     Fimber.d('showLoadingDialog()');
     loadingDialogIsShown = true;
-    Get.dialog(const Center(child: CircularProgressIndicator()),
-        barrierDismissible: false);
+    Get.dialog(const Center(child: CircularProgressIndicator()), barrierDismissible: false);
   }
 
   void hideLoadingDialog() {
